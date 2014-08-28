@@ -18,3 +18,6 @@ See bin/data/settings.ini for settings.
 Control keys: 
      Space - switch modes mesh/liquid mirror, 
      Enter - toggle fullscreen.
+
+	
+See more our interactive projects at kuflex.com
