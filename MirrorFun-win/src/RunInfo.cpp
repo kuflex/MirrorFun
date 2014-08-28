@@ -62,13 +62,12 @@ void RunInfo::setup()
 	//cout << "--- You can use command line parameters : --------" << endl;
 	//cout << "-SettingsFile=[filename] -Screen.scale=[0.1...1.0] -Run.durationSec=[1..10000]" << endl;
 
-	string settingsFileName = "data/settings.ini";
 	float scale = 1.0;
 
 
 	//Файл настроек
 	ofxIniSettings ini;
-	ini.load( settingsFileName );//"data/settings.ini");
+	ini.load( ofToDataPath("settings.ini") );
 
 	_w				= ini.get("Screen.w", _w);
 	_h				= ini.get("Screen.h", _h);

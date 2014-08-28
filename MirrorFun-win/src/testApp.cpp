@@ -45,16 +45,20 @@ ofImage imageStatic;
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	ofSetWindowTitle("MirrorFun 4.2    Press Space to switch modes");
+	ofSetWindowTitle("MirrorFun 4.2   Space - switch modes, Enter - full screen");
 
+    //Settings
 	runInfo.setup();	//он запустит окно OpenGL
-
 
 	runInfo.setupInSetup();
 
+    //Screen
 	//ofSetFrameRate( 60 );
 	ofSetVerticalSync( true );	//for smooth animation
-
+    ofSetWindowShape( runInfo.screenWidth(), runInfo.screenHeight() );
+    if ( runInfo.fullScreen() ) { ofSetFullscreen( true ); }
+    
+    
 	//ofBackground(255,255,255);
 	ofBackground(0,0,0);
 
@@ -407,6 +411,9 @@ void testApp::keyPressed  (int key){
 		case ' ':
 			testMode = !testMode;
 			break;
+        case OF_KEY_RETURN:
+            ofToggleFullscreen();
+            break;
 		case 't': runInfo.setPrintFps( !runInfo.printFps() );	//вкл-выкл выдачу fps на экран
 			break;
 	}
