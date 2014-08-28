@@ -4,7 +4,6 @@
 #include "MotionDetector.h"
 #include "Physics.h"
 #include "RunInfo.h"
-#include "pbSounds.h"
 
 string _imageFileName;
 string _movieFileName;
